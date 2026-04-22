@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELAMAT ULANG TAHUN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="gameboy-container">
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="screen active">
+            <div class="gameboy-screen">
+                <div class="screen-content">
+                    <h1 class="title">HAPPY 18th BIRTHDAY</h1>
+                    <div class="loading-text">&gt; INITIALIZING..._</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                        <div class="progress-text">38%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Screen -->
+        <div id="main-screen" class="screen">
+            <div class="gameboy-body">
+                <div class="gameboy-header">
+                    <div class="power-indicator">
+                        <span class="power-dot"></span>
+                        <span class="power-text">🥳🥳🥳</span>
+                    </div>
+                    <div class="brand-text">23 April 2026</div>
+                </div>
+
+                <div class="gameboy-screen">
+                    <div class="screen-content">
+                        <h1 class="birthday-title">Happy Birthday Indahh</h1>
+                        <div class="start-text">Indah Kameliya</div>
+                        <div class="screen-info">
+                            <span class="dot-matrix">🥳🥳🥳</span>
+                            <span class="battery">
+                                <span class="battery-dot"></span>
+                                🥳🥳🥳
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-buttons">
+                    <button class="menu-btn message-btn" data-page="message">MESSAGE</button>
+                    <button class="menu-btn gallery-btn" data-page="gallery">GALLERY</button>
+                    <button class="menu-btn music-btn" data-page="music">MUSIC</button>
+                    <button class="menu-btn tetris-btn" data-page="tetris">CAKE FOR UUU</button>
+                    <button class="menu-btn game-btn" data-page="game">TETRIS</button>
+                </div>
+
+                <div class="controls">
+                    <div class="dpad">
+                        <div class="dpad-center">
+                            <div class="dpad-up">↑</div>
+                            <div class="dpad-left">←</div>
+                            <div class="dpad-right">→</div>
+                            <div class="dpad-down">↓</div>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="action-btn b-btn">B</button>
+                        <button class="action-btn a-btn">A</button>
+                    </div>
+                </div>
+
+                <div class="bottom-controls">
+                    <button class="control-btn select-btn">SELECT</button>
+                    <button class="control-btn start-btn">START</button>
+                </div>
+
+                <div class="speaker-grille"></div>
+            </div>
+        </div>
+
+        <!-- Message Screen -->
+        <div id="message-screen" class="screen">
+            <div class="page-container">
+                <div class="page-screen">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+                <div class="page-controls">
+                    <button class="page-btn back-btn" data-page="main">KEMBALI</button>
+                    <button class="page-btn continue-btn">SELANJUTNYA</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Screen -->
+        <div id="gallery-screen" class="screen">
+            <div class="page-container">
+                <div class="page-screen">
+                    <div class="page-header">Gallery</div>
+                    <div class="gallery-content">
+                        <!-- Content will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="page-controls">
+                    <button class="page-btn back-btn" data-page="main">KEMBALI</button>
+                    <button class="page-btn continue-btn">SELANJUTNYA</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Music Screen -->
+        <div id="music-screen" class="screen">
+            <div class="page-container">
+                <div class="page-screen">
+                    <div class="page-header">Music Player</div>
+                    <div class="music-content">
+                        <!-- Content will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="page-controls">
+                    <button class="page-btn back-btn" data-page="main">KEMBALI</button>
+                    <button class="page-btn continue-btn">SELANJUTNYA</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tetris Screen (Pink + Cake) -->
+        <div id="tetris-screen" class="screen">
+            <div class="page-container">
+                <div class="page-screen tetris-pink-screen">
+                    <div class="cake-stage fancy">
+                        <div class="fireworks" aria-hidden="true">
+                            <span class="burst b1"></span>
+                            <span class="burst b2"></span>
+                            <span class="burst b3"></span>
+                            <span class="burst b4"></span>
+                        </div>
+
+                        <div class="confetti" aria-hidden="true"></div>
+
+                        <div class="birthday-text fancy-title">SELAMAT ULANG TAHUN INDAHH</div>
+
+                        <div class="cake cake-fancy">
+                            <div class="candles candles-18">
+                                <div class="candle digit-1">
+                                    <span class="flame"></span>
+                                    <span class="stick"></span>
+                                    <span class="num">1</span>
+                                </div>
+                                <div class="candle digit-8">
+                                    <span class="flame"></span>
+                                    <span class="stick"></span>
+                                    <span class="num">8</span>
+                                </div>
+                            </div>
+
+                            <div class="cake-top fancy-top">
+                                <div class="drip fancy-drip"></div>
+                                <div class="sprinkles fancy-sprinkles"></div>
+                            </div>
+
+                            <div class="cake-mid fancy-mid"></div>
+                            <div class="cake-base fancy-base"></div>
+
+                            <div class="ribbon" aria-hidden="true"></div>
+                            <div class="cake-plate fancy-plate"></div>
+                        </div>
+
+                        <div class="subtext">Sebelum lilinnya ditiup, make a wish dulu yaaa...</div>
+                        <div class="subtext">(make a wish)</div>
+                        <div class="subtext">Semoga semua cita-cita dan do'a pean terkabul✨</div>
+                    </div>
+                </div>
+
+                <div class="page-controls">
+                    <button class="page-btn back-btn" data-page="main">KEMBALI</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Screen (Tetris) -->
+        <div id="game-screen" class="screen">
+            <div class="page-container">
+                <div class="page-screen tetris-page-screen">
+                    <div class="page-header">TETRIS</div>
+                    <div class="tetris-stats">
+                        <span>SCORE: <b id="score">0</b></span>
+                        <span>LVL: <b id="level">1</b></span>
+                        <span>LINES: <b id="lines">0</b></span>
+                    </div>
+                    <div class="tetris-game">
+                        <canvas id="tetris-canvas"></canvas>
+                    </div>
+                    <div class="tetris-mobile-controls">
+                        <button id="left-btn" class="tetris-ctrl-btn">◀</button>
+                        <button id="rotate-btn" class="tetris-ctrl-btn">↻</button>
+                        <button id="right-btn" class="tetris-ctrl-btn">▶</button>
+                    </div>
+                </div>
+                <div class="page-controls">
+                    <button class="page-btn back-btn" data-page="main">KEMBALI</button>
+                    <button class="page-btn" id="start-tetris-btn">MULAI</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Over Modal -->
+        <div id="game-over-modal" class="modal">
+            <div class="modal-content">
+                <div class="game-over-text">GAME OVER</div>
+                <button class="modal-btn" id="confirm-btn">CONFIRM</button>
+            </div>
+        </div>
+
+        <!-- Final Message Modal -->
+        <div id="final-message-modal" class="modal">
+            <div class="modal-content">
+                <div class="final-message-title">yahh, kalahh</div>
+                <div class="final-message-text">
+                    <p>walaupun kamu kalah,</p>
+                    <p>tapi kamu selalu menang</p>
+                    <p>kok di hati aku, HEHE</p>
+                    <p>^_^</p>
+                    <p class="love-text">Wish You All The Best and Happiness</p>
+                </div>
+                <button class="modal-btn" id="ok-btn">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="mbg.js"></script>
+</body>
+
+</html>
